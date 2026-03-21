@@ -1,0 +1,10 @@
+{
+  "HamburgerMenuXpath": {
+      "xpath": "//input[@type='checkbox']"
+    },
+
+    "SignInLinkXpath": {
+        "xpath": "//ul[@id='menu']//a[@href='SignIn.html']"
+      }
+
+}

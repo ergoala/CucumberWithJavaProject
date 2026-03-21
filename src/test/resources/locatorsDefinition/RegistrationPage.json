@@ -1,0 +1,22 @@
+{
+  "UserNameTextField": {
+    "web": {
+      "xpath": "//input[@id='usr']"
+    }
+  },
+    "PasswordTextField": {
+      "web": {
+        "xpath": "//input[@id='pwd']"
+      }
+    },
+      "LoginButton": {
+        "web": {
+          "xpath": "//input[@type='submit']"
+        }
+      },
+        "RegistrationButton": {
+          "web": {
+            "xpath": "//button[@id='NewRegistration']"
+          }
+        }
+}
