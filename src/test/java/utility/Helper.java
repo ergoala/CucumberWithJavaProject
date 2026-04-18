@@ -1,17 +1,15 @@
 package utility;
 
-
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-
 public class Helper {
 
-    public static WebDriver driver;
-    public static WebDriverWait wait;
+    private final WebDriver driver;
+    private final WebDriverWait wait;
     private final JsonLocatorStore locatorStore;
 
     /**
@@ -23,7 +21,6 @@ public class Helper {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         this.locatorStore = new JsonLocatorStore(locatorResourcePath);
     }
-
 
     /**
      * Generic click using a locator defined in the JSON (page + key).
@@ -54,25 +51,11 @@ public class Helper {
         }
     }
 
-
-
-     public  void WaitClickElement(String  element , long waitTimeInSeconds){
-
-
-
-     }
-
-
-
-
-public void SendKeysOnnWebElement(WebElement element, String text){
-      element.click();
-      element.clear();
-      element.sendKeys(text);
-
-}
-
-
-
-
+    public void sendKeysToElement(String page, String key, String text) {
+        String xpath = locatorStore.get(page, key);
+        By by = By.xpath(xpath);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+        element.clear();
+        element.sendKeys(text);
+    }
 }

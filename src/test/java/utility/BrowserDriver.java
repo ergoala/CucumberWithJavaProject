@@ -1,25 +1,27 @@
 package utility;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.time.Duration;
+
 public class BrowserDriver {
 
     public static WebDriver driver;
-    public static ChromeOptions options;
 
     public BrowserDriver(){
-
-      options = new ChromeOptions();
-      options.addArguments("--remote-allow-origins=*");
-      System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+ "/src/test/resources/drivers/chromedriver.exe");
-      this.driver = new ChromeDriver();
-      driver.get("https://anupdamoda.github.io/AceOnlineShoePortal/index.html#");
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        driver = new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+        driver.get("https://anupdamoda.github.io/AceOnlineShoePortal/index.html#");
     }
 
-public void close(){
-        this.driver.close();
-}
-
+    public void close(){
+        driver.close();
+    }
 }

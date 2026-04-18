@@ -1,66 +1,40 @@
 package pages;
 
-import io.cucumber.messages.ndjson.internal.com.fasterxml.jackson.databind.util.JSONPObject;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import utility.BrowserDriver;
-
-import java.io.FileReader;
-import java.io.Reader;
-import java.time.Duration;
+import utility.Helper;
 
 public class RegistrationPage extends BrowserDriver {
+    private final Helper he;
 
-
-public static void Write_first_name()  {
-        // Explicit wait (targeted)
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    WebElement el = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("")));
-        driver.findElement(By.xpath("")).sendKeys("sa");
+    public RegistrationPage() {
+        this.he = new Helper(driver, "locatorsDefinition/RegistrationPage.json");
     }
 
-    public static void Write_last_name()  {
-        // Explicit wait (targeted)
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement el = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("PasswordTextField")));
-        driver.findElement(By.xpath("PasswordTextField")).sendKeys("sa");
+    public void Write_first_name(String firstName) {
+        he.sendKeysToElement("RegistrationPage", "FirstNameTextField", firstName);
     }
 
-    public static void Write_email_id()  {
-// Explicit wait (targeted)
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement el = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("LoginButton")));
-        driver.findElement(By.xpath("LoginButton")).click();
+    public void Write_last_name(String lastName) {
+        he.sendKeysToElement("RegistrationPage", "LastNameTextField", lastName);
     }
 
-    public static void Write_Contact_number() {
-// Explicit wait (targeted)
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement el = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("LoginButton")));
-        driver.findElement(By.xpath("LoginButton")).click();
+    public void Write_email_id(String email) {
+        he.sendKeysToElement("RegistrationPage", "EmailTextField", email);
     }
 
-        public static void Write_User_name() {
-// Explicit wait (targeted)
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            WebElement el = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("LoginButton")));
-            driver.findElement(By.xpath("LoginButton")).click();
-
-        }
-
-    public static void Write_password   () {
-// Explicit wait (targeted)
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement el = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("LoginButton")));
-        driver.findElement(By.xpath("LoginButton")).click();
-
+    public void Write_Contact_number(String contactNumber) {
+        he.sendKeysToElement("RegistrationPage", "ContactNumberTextField", contactNumber);
     }
-        public static void Click_Register_button()  {
-// Explicit wait (targeted)
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement el = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("RegistrationButton")));
-        driver.findElement(By.xpath("RegistrationButton")).click();
+
+    public void Write_User_name(String userName) {
+        he.sendKeysToElement("RegistrationPage", "UserNameTextField", userName);
+    }
+
+    public void Write_password(String password) {
+        he.sendKeysToElement("RegistrationPage", "PasswordTextField", password);
+    }
+
+    public void Click_Register_button() {
+        he.clickOnWebElement("RegistrationPage", "RegisterButton");
     }
 }

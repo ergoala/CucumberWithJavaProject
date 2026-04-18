@@ -2,13 +2,10 @@ package utility;
 
 import org.junit.After;
 import org.junit.Before;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Hooks {
 
     public static BrowserDriver driver;
-    public static ChromeOptions options;
-
 
     @Before
     public void setUp(){
@@ -16,8 +13,7 @@ public class Hooks {
     }
 
     @After
-public void tearDown(){
-
+    public void tearDown(){
         driver.close();
     }
 }
