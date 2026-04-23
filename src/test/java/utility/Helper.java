@@ -2,6 +2,7 @@ package utility;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -51,11 +52,26 @@ public class Helper {
         }
     }
 
+    /** Clears the input field identified by the given JSON locator and types the provided text. */
     public void sendKeysToElement(String page, String key, String text) {
         String xpath = locatorStore.get(page, key);
         By by = By.xpath(xpath);
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(by));
         element.clear();
         element.sendKeys(text);
+    }
+
+    /** Selects an option by visible text from a dropdown identified by the given JSON locator. */
+    public void selectDropdownByVisibleText(String page, String key, String visibleText) {
+        String xpath = locatorStore.get(page, key);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+        new Select(element).selectByVisibleText(visibleText);
+    }
+
+    /** Returns the visible text of the element identified by the given JSON locator. */
+    public String getTextFromElement(String page, String key) {
+        String xpath = locatorStore.get(page, key);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+        return element.getText();
     }
 }

@@ -1,0 +1,10 @@
+{
+  "ShoeTypesPage": {
+    "PageTitle": "//font[@id='ShoePortalTitle']",
+    "FormalShoesButton": "//button[contains(@class,'FormalShoes')]",
+    "FormalShoesSection": "//div[@id='SmokeTests']",
+    "SportsShoesSection": "//div[@id='RegressionTests']",
+    "SneakerShoesSection": "//div[@id='VanguardTests']",
+    "HomeNavLink": "//a[@href='index.html']"
+  }
+}

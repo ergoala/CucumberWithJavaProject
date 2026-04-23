@@ -1,10 +1,15 @@
 {
-  "HamburgerMenuXpath": {
-      "xpath": "//input[@type='checkbox']"
-    },
-
-    "SignInLinkXpath": {
-        "xpath": "//ul[@id='menu']//a[@href='SignIn.html']"
-      }
-
+  "HomePage": {
+    "HamburgerMenuCheckbox": "//div[@id='menuToggle']//input[@type='checkbox']",
+    "HomeNavLink": "//ul[@id='menu']//a[@href='index.html']",
+    "SignInNavLink": "//ul[@id='menu']//a[@href='SignIn.html']",
+    "OnlineProductsNavLink": "//ul[@id='menu']//a[@href='OnlineProducts.html']",
+    "AboutNavLink": "//ul[@id='menu']//a[@href='#']",
+    "OurTeamNavLink": "//ul[@id='menu']//a[@href='Contacts.html'][1]",
+    "ContactNavLink": "//ul[@id='menu']//a[@href='Contacts.html'][2]",
+    "PageTitle": "//font[@id='ShoePortalTitle']",
+    "LogoImage": "//img[@id='ShoePortalImage']",
+    "MainPageText": "//p[@id='MainPageText']",
+    "CopyrightFooter": "//p[@id='CopyrightFooter']"
+  }
 }

@@ -1,7 +1,5 @@
 {
-  "ProductCategoryHeading": {
-    "web": {
-      "xpath": "//font[@id='ShoePortalTitle']"
-    }
+  "ProductCategoryPage": {
+    "ProductCategoryHeading": "//font[@id='ShoePortalTitle']"
   }
 }

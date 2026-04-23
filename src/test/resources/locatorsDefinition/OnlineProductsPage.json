@@ -1,0 +1,30 @@
+{
+  "OnlineProductsPage": {
+    "HomeNavLink": "//a[@href='index.html']",
+    "FormalShoesTitle": "//td[@class='FormalShoesTitle']",
+    "FormalShoesTable": "//table[@class='formalshoetable']",
+    "FormalShoesDropdown": "//*[contains(@class,'formalshoedropdown')]",
+    "FormalShoesDropup": "//*[contains(@class,'formalshoedropup')]",
+    "SportsShoesTitle": "//td[@class='SportsShoesTitle']",
+    "SportsShoesTable": "//table[@class='sportsshoetable']",
+    "SportsShoesDropdown": "//*[contains(@class,'sportsshoedropdown')]",
+    "SportsShoesDropup": "//*[contains(@class,'sportsshoedropup')]",
+    "SneakerShoesTitle": "//td[@class='SneakerShoesTitle']",
+    "SneakerShoesTable": "//table[@class='sneakersshoetable']",
+    "SneakerShoesDropdown": "//*[contains(@class,'sneakershoedropdown')]",
+    "SneakerShoesDropup": "//*[contains(@class,'sneakersshoedropup')]",
+    "AllProductImages": "//img[@id='Shoethumbnail']",
+    "ClassicCheltenham": "//td[contains(text(),'Classic Cheltenham')]",
+    "PrestigeBarlett": "//td[contains(text(),'Prestige Barlett Borgue')]",
+    "PrestigeChelsea": "//td[contains(text(),'Prestige Chelsea')]",
+    "PrestigeSuede": "//td[contains(text(),'Prestigue Suede')]",
+    "Ultimate": "//td[contains(text(),'Ultimate')]",
+    "Revolution5": "//td[contains(text(),'Revolution 5')]",
+    "StarRunner": "//td[contains(text(),'Star Runner')]",
+    "FlyteFoam": "//td[contains(text(),'Flyte Foam')]",
+    "Archivo": "//td[contains(text(),'Archivo')]",
+    "Questar": "//td[contains(text(),'Questar')]",
+    "SenseBouncer": "//td[contains(text(),'SenseBouncer')]",
+    "VsSET": "//td[contains(text(),'VsSET')]"
+  }
+}

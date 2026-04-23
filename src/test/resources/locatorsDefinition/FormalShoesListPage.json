@@ -1,0 +1,5 @@
+{
+  "FormalShoesListPage": {
+    "HomeNavLink": "//a[@href='index.html']"
+  }
+}

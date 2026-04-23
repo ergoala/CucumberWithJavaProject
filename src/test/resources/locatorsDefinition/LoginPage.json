@@ -1,22 +1,9 @@
 {
-  "UserNameTextField": {
-    "web": {
-      "xpath": "//input[@id='usr']"
-    }
-  },
-    "PasswordTextField": {
-      "web": {
-        "xpath": "//input[@id='pwd']"
-      }
-    },
-      "LoginButton": {
-        "web": {
-          "xpath": "//input[@type='submit']"
-        }
-      },
-        "RegistrationButton": {
-          "web": {
-            "xpath": "//button[@id='NewRegistration']"
-          }
-        }
+  "LoginPage": {
+    "UserNameTextField": "//input[@id='usr']",
+    "PasswordTextField": "//input[@id='pwd']",
+    "LoginButton": "//input[@type='submit'][@value='Login']",
+    "NewRegistrationButton": "//button[@id='NewRegistration']",
+    "HomeNavLink": "//a[@href='index.html']"
+  }
 }

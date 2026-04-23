@@ -1,22 +1,13 @@
 {
-  "UserNameTextField": {
-    "web": {
-      "xpath": "//input[@id='usr']"
-    }
-  },
-    "PasswordTextField": {
-      "web": {
-        "xpath": "//input[@id='pwd']"
-      }
-    },
-      "LoginButton": {
-        "web": {
-          "xpath": "//input[@type='submit']"
-        }
-      },
-        "RegistrationButton": {
-          "web": {
-            "xpath": "//button[@id='NewRegistration']"
-          }
-        }
+  "RegistrationPage": {
+    "SalutationDropdown": "//select[@id='Salutation']",
+    "FirstNameTextField": "//input[@id='firstname']",
+    "LastNameTextField": "//input[@id='lastname']",
+    "EmailTextField": "//input[@id='emailId']",
+    "ContactNumberTextField": "//input[@id='contactNumber']",
+    "UserNameTextField": "//input[@id='usr']",
+    "PasswordTextField": "//input[@id='pwd']",
+    "RegisterButton": "//input[@type='submit'][@value='Submit']",
+    "HomeNavLink": "//a[@href='index.html']"
+  }
 }

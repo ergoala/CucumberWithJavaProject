@@ -1,6 +1,0 @@
-{
-  "HomePage": {
-    "HamburgerMenuXpath": "//a[@class='navbar-brand']",
-    "SignInLinkXpath": "//a[contains(text(),'Sign In')]"
-  }
-}

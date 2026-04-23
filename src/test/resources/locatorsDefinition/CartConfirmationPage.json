@@ -1,0 +1,7 @@
+{
+  "CartConfirmationPage": {
+    "ConfirmationMessage": "//CENTER//h1",
+    "PageTitle": "//font[@id='ShoePortalTitle']",
+    "HomeNavLink": "//a[@href='index.html']"
+  }
+}

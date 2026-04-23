@@ -7,10 +7,10 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/java/features",
-        glue = {"utility", "stepsdefinitions" },
-        tags = "@E2E",
-        plugin = {"pretty", "html:target/cucumber-html-report","json:cucumber.json"}
+        glue = {"utility", "stepsdefinitions"},
+        tags = "@e2e",
+        plugin = {"pretty", "html:target/cucumber-e2e-report", "json:cucumber-e2e.json"}
 )
-public class TestRunner {
+public class E2ETestRunner {
 
 }
